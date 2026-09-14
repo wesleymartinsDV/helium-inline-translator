@@ -1,5 +1,11 @@
 {
   "appDesc": {
     "message": "תרגם דפים או טקסט נבחר בצורה נקייה ללא חלונות קופצים באמצעות קיצורי דרך מהירים."
+  },
+  "contextTranslatePage": {
+    "message": "תרגם דף"
+  },
+  "contextTranslateSelection": {
+    "message": "תרגם בחירה"
   }
 }

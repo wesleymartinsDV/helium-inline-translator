@@ -1,5 +1,11 @@
 {
   "appDesc": {
     "message": "Translate pages or selected text cleanly without popups using quick shortcuts."
+  },
+  "contextTranslatePage": {
+    "message": "Translate page"
+  },
+  "contextTranslateSelection": {
+    "message": "Translate selection"
   }
 }

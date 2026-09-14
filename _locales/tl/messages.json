@@ -1,5 +1,11 @@
 {
   "appDesc": {
     "message": "Isalin ang mga pahina o napiling teksto nang malinis na walang mga popup gamit ang mabilis na shortcut."
+  },
+  "contextTranslatePage": {
+    "message": "Isalin ang pahina"
+  },
+  "contextTranslateSelection": {
+    "message": "Isalin ang napili"
   }
 }

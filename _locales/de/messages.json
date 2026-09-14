@@ -1,5 +1,11 @@
 {
   "appDesc": {
     "message": "Übersetze Seiten oder markierte Texte ohne Pop-ups, mit einem klaren Layout und schnellen Tastenkürzeln."
+  },
+  "contextTranslatePage": {
+    "message": "Seite übersetzen"
+  },
+  "contextTranslateSelection": {
+    "message": "Auswahl übersetzen"
   }
 }

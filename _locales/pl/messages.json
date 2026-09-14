@@ -1,5 +1,11 @@
 {
   "appDesc": {
     "message": "Tłumacz strony lub zaznaczony tekst bez wyskakujących okien, przejrzyście i z szybkimi skrótami."
+  },
+  "contextTranslatePage": {
+    "message": "Przetłumacz stronę"
+  },
+  "contextTranslateSelection": {
+    "message": "Przetłumacz zaznaczenie"
   }
 }

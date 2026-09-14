@@ -1,5 +1,11 @@
 {
   "appDesc": {
     "message": "Översätt sidor eller markerad text utan popupfönster, rent och med snabba genvägar."
+  },
+  "contextTranslatePage": {
+    "message": "Översätt sida"
+  },
+  "contextTranslateSelection": {
+    "message": "Översätt markering"
   }
 }

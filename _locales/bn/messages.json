@@ -1,5 +1,11 @@
 {
   "appDesc": {
     "message": "দ্রুত শর্টকাট ব্যবহার করে পপআপ ছাড়াই পরিষ্কারভাবে পৃষ্ঠা বা নির্বাচিত টেক্সট অনুবাদ করুন।"
+  },
+  "contextTranslatePage": {
+    "message": "পৃষ্ঠা অনুবাদ করুন"
+  },
+  "contextTranslateSelection": {
+    "message": "নির্বাচন অনুবাদ করুন"
   }
 }

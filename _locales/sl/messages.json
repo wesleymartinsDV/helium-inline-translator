@@ -1,5 +1,11 @@
 {
   "appDesc": {
     "message": "Prevedite strani ali izbrano besedilo čisto brez pojavnih oken z uporabo hitrih bližnjic."
+  },
+  "contextTranslatePage": {
+    "message": "Prevedi stran"
+  },
+  "contextTranslateSelection": {
+    "message": "Prevedi izbiro"
   }
 }

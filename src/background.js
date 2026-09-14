@@ -37,13 +37,13 @@ function setupContextMenus() {
     // This menu appears only when you right-click on the page without selecting text
     chrome.contextMenus.create({
       id: "translate-page",
-      title: "Traduzir página inteira",
+      title: chrome.i18n.getMessage("contextTranslatePage"),
       contexts: ["page"],
     });
     // This menu appears only when you right-click on selected text
     chrome.contextMenus.create({
       id: "translate-selection",
-      title: "Traduzir texto selecionado",
+      title: chrome.i18n.getMessage("contextTranslateSelection"),
       contexts: ["selection"],
     });
   });

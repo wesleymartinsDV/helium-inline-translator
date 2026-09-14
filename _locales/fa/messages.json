@@ -1,5 +1,11 @@
 {
   "appDesc": {
     "message": "صفحات یا متن انتخاب شده را بدون پنجره بازشو با استفاده از میانبرهای سریع ترجمه کنید."
+  },
+  "contextTranslatePage": {
+    "message": "ترجمه صفحه"
+  },
+  "contextTranslateSelection": {
+    "message": "ترجمه انتخاب"
   }
 }

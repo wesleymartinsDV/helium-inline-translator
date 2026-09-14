@@ -1,5 +1,11 @@
 {
   "appDesc": {
     "message": "Преведите странице или изабрани текст без искачућих прозора користећи брзе пречице."
+  },
+  "contextTranslatePage": {
+    "message": "Преведи страницу"
+  },
+  "contextTranslateSelection": {
+    "message": "Преведи селекцију"
   }
 }

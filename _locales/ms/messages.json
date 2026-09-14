@@ -1,5 +1,11 @@
 {
   "appDesc": {
     "message": "Terjemah halaman atau teks yang dipilih dengan bersih tanpa popup menggunakan pintasan pantas."
+  },
+  "contextTranslatePage": {
+    "message": "Terjemah halaman"
+  },
+  "contextTranslateSelection": {
+    "message": "Terjemah pilihan"
   }
 }

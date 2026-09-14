@@ -1,5 +1,11 @@
 {
   "appDesc": {
     "message": "पृष्ठों या चयनित पाठ को बिना पॉपअप, साफ-सुथरे तरीके से तेज शॉर्टकट की मदद से अनुवाद करें।"
+  },
+  "contextTranslatePage": {
+    "message": "पृष्ठ का अनुवाद करें"
+  },
+  "contextTranslateSelection": {
+    "message": "चयन का अनुवाद करें"
   }
 }

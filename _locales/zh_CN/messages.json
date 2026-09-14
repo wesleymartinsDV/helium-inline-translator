@@ -1,5 +1,11 @@
 {
   "appDesc": {
     "message": "无需弹窗，使用快捷键即可干净利落地翻译页面或选定文本。"
+  },
+  "contextTranslatePage": {
+    "message": "翻译页面"
+  },
+  "contextTranslateSelection": {
+    "message": "翻译选择"
   }
 }

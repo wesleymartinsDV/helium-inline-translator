@@ -1,5 +1,11 @@
 {
   "appDesc": {
     "message": "Fordítson oldalakat vagy kijelölt szöveget tisztán, felugró ablakok nélkül, gyorsbillentyűkkel."
+  },
+  "contextTranslatePage": {
+    "message": "Oldal fordítása"
+  },
+  "contextTranslateSelection": {
+    "message": "Kijelölés fordítása"
   }
 }

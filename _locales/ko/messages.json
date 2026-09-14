@@ -1,5 +1,11 @@
 {
   "appDesc": {
     "message": "팝업 없이 깔끔하게 페이지나 선택한 텍스트를 빠른 단축키로 번역합니다."
+  },
+  "contextTranslatePage": {
+    "message": "페이지 번역"
+  },
+  "contextTranslateSelection": {
+    "message": "선택 번역"
   }
 }

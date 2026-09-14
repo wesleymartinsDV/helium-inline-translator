@@ -1,5 +1,11 @@
 {
   "appDesc": {
     "message": "فوری شارٹ کٹس کا استعمال کرتے ہوئے پاپ اپ کے بغیر صفحات یا منتخب متن کا صاف ترجمہ کریں۔"
+  },
+  "contextTranslatePage": {
+    "message": "صفحہ کا ترجمہ کریں"
+  },
+  "contextTranslateSelection": {
+    "message": "انتخاب کا ترجمہ کریں"
   }
 }

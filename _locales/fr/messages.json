@@ -1,5 +1,11 @@
 {
   "appDesc": {
     "message": "Traduisez des pages ou des textes sélectionnés sans pop-ups, de manière épurée, avec des raccourcis rapides."
+  },
+  "contextTranslatePage": {
+    "message": "Traduire la page"
+  },
+  "contextTranslateSelection": {
+    "message": "Traduire la sélection"
   }
 }

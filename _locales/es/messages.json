@@ -1,5 +1,11 @@
 {
   "appDesc": {
     "message": "Traduce páginas o textos seleccionados sin ventanas emergentes y de forma limpia con atajos rápidos."
+  },
+  "contextTranslatePage": {
+    "message": "Traducir página"
+  },
+  "contextTranslateSelection": {
+    "message": "Traducir selección"
   }
 }

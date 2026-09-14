@@ -1,5 +1,11 @@
 {
   "appDesc": {
     "message": "ترجم صفحات أو نصوصًا محددة بلا نوافذ منبثقة وبشكل أنيق باستخدام اختصارات سريعة."
+  },
+  "contextTranslatePage": {
+    "message": "ترجم الصفحة"
+  },
+  "contextTranslateSelection": {
+    "message": "ترجم التحديد"
   }
 }

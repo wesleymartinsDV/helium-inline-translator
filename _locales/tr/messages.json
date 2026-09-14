@@ -1,5 +1,11 @@
 {
   "appDesc": {
     "message": "Pop-up olmadan, temiz bir görünümle ve hızlı kısayollarla sayfaları veya seçili metni çevirin."
+  },
+  "contextTranslatePage": {
+    "message": "Sayfayı çevir"
+  },
+  "contextTranslateSelection": {
+    "message": "Seçimi çevir"
   }
 }

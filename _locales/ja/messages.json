@@ -1,5 +1,11 @@
 {
   "appDesc": {
     "message": "ポップアップなしでページや選択したテキストをすっきり翻訳し、素早いショートカットで操作できます。"
+  },
+  "contextTranslatePage": {
+    "message": "ページを翻訳"
+  },
+  "contextTranslateSelection": {
+    "message": "選択を翻訳"
   }
 }

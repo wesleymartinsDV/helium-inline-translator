@@ -1,5 +1,11 @@
 {
   "appDesc": {
     "message": "Aistrigh leathanaigh nó téacs roghnaithe go néata gan fhuinneoga aníos ag baint úsáide as aicearraí tapa."
+  },
+  "contextTranslatePage": {
+    "message": "Aistrigh leathanach"
+  },
+  "contextTranslateSelection": {
+    "message": "Aistrigh roghnú"
   }
 }

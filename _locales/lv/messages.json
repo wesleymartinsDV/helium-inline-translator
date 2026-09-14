@@ -1,5 +1,11 @@
 {
   "appDesc": {
     "message": "Tulkojiet lapas vai atlasīto tekstu tīri bez uznirstošajiem logiem, izmantojot ātrās saīsnes."
+  },
+  "contextTranslatePage": {
+    "message": "Tulkot lapu"
+  },
+  "contextTranslateSelection": {
+    "message": "Tulkot atlasi"
   }
 }

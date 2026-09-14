@@ -1,5 +1,11 @@
 {
   "appDesc": {
     "message": "Oversæt sider eller markeret tekst uden pop op-vinduer, rent og med hurtige genveje."
+  },
+  "contextTranslatePage": {
+    "message": "Oversæt side"
+  },
+  "contextTranslateSelection": {
+    "message": "Oversæt markering"
   }
 }

@@ -1,5 +1,11 @@
 {
   "appDesc": {
     "message": "Oversett sider eller valgt tekst uten popuper, ryddig og med raske snarveier."
+  },
+  "contextTranslatePage": {
+    "message": "Oversett side"
+  },
+  "contextTranslateSelection": {
+    "message": "Oversett valg"
   }
 }

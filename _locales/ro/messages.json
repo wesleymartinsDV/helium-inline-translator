@@ -1,5 +1,11 @@
 {
   "appDesc": {
     "message": "Traduceți pagini sau text selectat curat, fără ferestre pop-up, folosind comenzi rapide."
+  },
+  "contextTranslatePage": {
+    "message": "Traduce pagina"
+  },
+  "contextTranslateSelection": {
+    "message": "Traduce selecția"
   }
 }

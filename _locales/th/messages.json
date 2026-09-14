@@ -1,5 +1,11 @@
 {
   "appDesc": {
     "message": "แปลหน้าเว็บหรือข้อความที่เลือกอย่างสะอาดโดยไม่มีป๊อปอัปโดยใช้ทางลัดด่วน"
+  },
+  "contextTranslatePage": {
+    "message": "แปลหน้า"
+  },
+  "contextTranslateSelection": {
+    "message": "แปลส่วนที่เลือก"
   }
 }

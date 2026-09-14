@@ -1,5 +1,11 @@
 {
   "appDesc": {
     "message": "Prekladajte stránky alebo vybraný text čisto bez vyskakovacích okien pomocou rýchlych skratiek."
+  },
+  "contextTranslatePage": {
+    "message": "Preložiť stránku"
+  },
+  "contextTranslateSelection": {
+    "message": "Preložiť výber"
   }
 }

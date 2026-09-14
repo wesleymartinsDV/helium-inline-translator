@@ -1,5 +1,11 @@
 {
   "appDesc": {
     "message": "Iwwersetzen Säiten oder ausgewielte Texter propper ouni Popup-Fënsteren mat schnelle Tastekombinatiounen."
+  },
+  "contextTranslatePage": {
+    "message": "Säit iwwersetzen"
+  },
+  "contextTranslateSelection": {
+    "message": "Auswiel iwwersetzen"
   }
 }
