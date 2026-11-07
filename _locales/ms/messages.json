@@ -1,5 +1,8 @@
 {
   "appDesc": {
     "message": "Terjemah halaman atau teks yang dipilih dengan bersih tanpa popup menggunakan pintasan pantas."
+  },
+  "actionTitle": {
+    "message": "Helium Inline Translator"
   }
 }

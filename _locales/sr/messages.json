@@ -1,5 +1,8 @@
 {
   "appDesc": {
     "message": "Преведите странице или изабрани текст без искачућих прозора користећи брзе пречице."
+  },
+  "actionTitle": {
+    "message": "Helium Inline Translator"
   }
 }

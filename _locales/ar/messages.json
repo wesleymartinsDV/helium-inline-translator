@@ -1,5 +1,59 @@
 {
   "appDesc": {
     "message": "ترجم صفحات أو نصوصًا محددة بلا نوافذ منبثقة وبشكل أنيق باستخدام اختصارات سريعة."
+  },
+  "actionTitle": {
+    "message": "Helium Inline Translator"
+  },
+  "menuTranslatePage": {
+    "message": "ترجمة الصفحة بأكملها"
+  },
+  "menuTranslateSelection": {
+    "message": "ترجمة النص المحدد"
+  },
+  "commandTranslatePage": {
+    "message": "ترجمة الصفحة الحالية"
+  },
+  "commandTranslateSelection": {
+    "message": "ترجمة النص المحدد"
+  },
+  "toastTranslating": {
+    "message": "جارٍ الترجمة…"
+  },
+  "toastTranslated": {
+    "message": "تمت ترجمة الصفحة."
+  },
+  "toastReverted": {
+    "message": "تمت استعادة الصفحة الأصلية."
+  },
+  "toastSelectionTranslated": {
+    "message": "تمت ترجمة التحديد."
+  },
+  "toastNoSelection": {
+    "message": "حدد نصًا أولاً."
+  },
+  "toastFailed": {
+    "message": "فشلت الترجمة. حاول مرة أخرى."
+  },
+  "toastNothing": {
+    "message": "لم يتم العثور على نص قابل للترجمة."
+  },
+  "toastAlready": {
+    "message": "تمت ترجمة هذه الصفحة بالفعل."
+  },
+  "toastCancelled": {
+    "message": "تم إلغاء الترجمة."
+  },
+  "toastCancel": {
+    "message": "إلغاء"
+  },
+  "toastNothingToRevert": {
+    "message": "لا يوجد شيء لتراجعه."
+  },
+  "toastPartial": {
+    "message": "تعذّرت ترجمة بعض النصوص. اضغط الاختصار مجددًا للتراجع."
+  },
+  "toastRevert": {
+    "message": "تراجع"
   }
 }

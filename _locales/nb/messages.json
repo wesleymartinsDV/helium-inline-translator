@@ -1,5 +1,8 @@
 {
   "appDesc": {
     "message": "Oversett sider eller valgt tekst uten popuper, ryddig og med raske snarveier."
+  },
+  "actionTitle": {
+    "message": "Helium Inline Translator"
   }
 }

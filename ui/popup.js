@@ -1,126 +1,41 @@
-// Translate all elements with data-i18n attributes
+// ui/popup.js
+
 function applyTranslations() {
-  document.querySelectorAll("[data-i18n]").forEach((el) => {
-    const key = el.getAttribute("data-i18n");
-    el.textContent = t(key);
+  document.querySelectorAll("[data-i18n]").forEach((element) => {
+    const key = element.getAttribute("data-i18n");
+    element.textContent = t(key);
   });
 
-  document.querySelectorAll("[data-i18n-placeholder]").forEach((el) => {
-    const key = el.getAttribute("data-i18n-placeholder");
-    el.placeholder = t(key);
+  document.querySelectorAll("[data-i18n-placeholder]").forEach((element) => {
+    const key = element.getAttribute("data-i18n-placeholder");
+    element.placeholder = t(key);
   });
+
+  document.documentElement.lang = currentLanguage;
+  const base = currentLanguage.split("-")[0];
+  document.documentElement.dir = ["ar", "he", "fa", "ur"].includes(base)
+    ? "rtl"
+    : "ltr";
 }
 
 document.addEventListener("DOMContentLoaded", async () => {
-  const languages = [
-    { code: "pt-BR", name: "Português (Brasil)", flag: "BR" },
-    { code: "pt-PT", name: "Português (Portugal)", flag: "PT" },
-    { code: "en", name: "English", flag: "US" },
-    { code: "es", name: "Español", flag: "ES" },
-    { code: "fr", name: "Français", flag: "FR" },
-    { code: "de", name: "Deutsch", flag: "DE" },
-    { code: "it", name: "Italiano", flag: "IT" },
-    { code: "ja", name: "日本語", flag: "JP" },
-    { code: "ko", name: "한국어", flag: "KR" },
-    { code: "zh-CN", name: "中文 (简体)", flag: "CN" },
-    { code: "zh-TW", name: "中文 (繁體)", flag: "TW" },
-    { code: "ru", name: "Русский", flag: "RU" },
-    { code: "uk", name: "Українська", flag: "UA" },
-    { code: "ar", name: "العربية", flag: "SA" },
-    { code: "he", name: "עברית", flag: "IL" },
-    { code: "fa", name: "فارسی", flag: "IR" },
-    { code: "ur", name: "اردو", flag: "PK" },
-    { code: "hi", name: "हिन्दी", flag: "IN" },
-    { code: "bn", name: "বাংলা", flag: "BD" },
-    { code: "th", name: "ไทย", flag: "TH" },
-    { code: "vi", name: "Tiếng Việt", flag: "VN" },
-    { code: "id", name: "Bahasa Indonesia", flag: "ID" },
-    { code: "ms", name: "Bahasa Melayu", flag: "MY" },
-    { code: "tl", name: "Filipino", flag: "PH" },
-    { code: "nl", name: "Nederlands", flag: "NL" },
-    { code: "pl", name: "Polski", flag: "PL" },
-    { code: "tr", name: "Türkçe", flag: "TR" },
-    { code: "el", name: "Ελληνικά", flag: "GR" },
-    { code: "cs", name: "Čeština", flag: "CZ" },
-    { code: "sk", name: "Slovenčina", flag: "SK" },
-    { code: "hu", name: "Magyar", flag: "HU" },
-    { code: "ro", name: "Română", flag: "RO" },
-    { code: "bg", name: "Български", flag: "BG" },
-    { code: "hr", name: "Hrvatski", flag: "HR" },
-    { code: "sv", name: "Svenska", flag: "SE" },
-    { code: "da", name: "Dansk", flag: "DK" },
-    { code: "nb", name: "Norsk", flag: "NO" },
-    { code: "fi", name: "Suomi", flag: "FI" },
-    { code: "et", name: "Eesti", flag: "EE" },
-    { code: "lv", name: "Latviešu", flag: "LV" },
-    { code: "lt", name: "Lietuvių", flag: "LT" },
-    { code: "sl", name: "Slovenščina", flag: "SI" },
-    { code: "is", name: "Íslenska", flag: "IS" },
-    { code: "lb", name: "Lëtzebuergesch", flag: "LU" },
-    { code: "mt", name: "Malti", flag: "MT" },
-    { code: "ca", name: "Català", flag: "AD" },
-    { code: "af", name: "Afrikaans", flag: "ZA" },
-    { code: "ga", name: "Gaeilge", flag: "IE" },
-    { code: "sr", name: "Српски", flag: "RS" },
-  ];
-
-  const FLAG_SOURCES = {
-    BR: chrome.runtime.getURL("icons/flags/br.svg"),
-    PT: chrome.runtime.getURL("icons/flags/pt.svg"),
-    US: chrome.runtime.getURL("icons/flags/us.svg"),
-    ES: chrome.runtime.getURL("icons/flags/es.svg"),
-    FR: chrome.runtime.getURL("icons/flags/fr.svg"),
-    DE: chrome.runtime.getURL("icons/flags/de.svg"),
-    IT: chrome.runtime.getURL("icons/flags/it.svg"),
-    JP: chrome.runtime.getURL("icons/flags/jp.svg"),
-    KR: chrome.runtime.getURL("icons/flags/kr.svg"),
-    CN: chrome.runtime.getURL("icons/flags/cn.svg"),
-    TW: chrome.runtime.getURL("icons/flags/tw.svg"),
-    RU: chrome.runtime.getURL("icons/flags/ru.svg"),
-    UA: chrome.runtime.getURL("icons/flags/ua.svg"),
-    SA: chrome.runtime.getURL("icons/flags/sa.svg"),
-    IL: chrome.runtime.getURL("icons/flags/il.svg"),
-    IR: chrome.runtime.getURL("icons/flags/ir.svg"),
-    PK: chrome.runtime.getURL("icons/flags/pk.svg"),
-    IN: chrome.runtime.getURL("icons/flags/in.svg"),
-    BD: chrome.runtime.getURL("icons/flags/bd.svg"),
-    TH: chrome.runtime.getURL("icons/flags/th.svg"),
-    VN: chrome.runtime.getURL("icons/flags/vn.svg"),
-    ID: chrome.runtime.getURL("icons/flags/id.svg"),
-    MY: chrome.runtime.getURL("icons/flags/my.svg"),
-    PH: chrome.runtime.getURL("icons/flags/ph.svg"),
-    NL: chrome.runtime.getURL("icons/flags/nl.svg"),
-    PL: chrome.runtime.getURL("icons/flags/pl.svg"),
-    TR: chrome.runtime.getURL("icons/flags/tr.svg"),
-    GR: chrome.runtime.getURL("icons/flags/gr.svg"),
-    CZ: chrome.runtime.getURL("icons/flags/cz.svg"),
-    SK: chrome.runtime.getURL("icons/flags/sk.svg"),
-    HU: chrome.runtime.getURL("icons/flags/hu.svg"),
-    RO: chrome.runtime.getURL("icons/flags/ro.svg"),
-    BG: chrome.runtime.getURL("icons/flags/bg.svg"),
-    HR: chrome.runtime.getURL("icons/flags/hr.svg"),
-    SE: chrome.runtime.getURL("icons/flags/se.svg"),
-    DK: chrome.runtime.getURL("icons/flags/dk.svg"),
-    NO: chrome.runtime.getURL("icons/flags/no.svg"),
-    FI: chrome.runtime.getURL("icons/flags/fi.svg"),
-    EE: chrome.runtime.getURL("icons/flags/ee.svg"),
-    LV: chrome.runtime.getURL("icons/flags/lv.svg"),
-    LT: chrome.runtime.getURL("icons/flags/lt.svg"),
-    SI: chrome.runtime.getURL("icons/flags/si.svg"),
-    IS: chrome.runtime.getURL("icons/flags/is.svg"),
-    LU: chrome.runtime.getURL("icons/flags/lu.svg"),
-    MT: chrome.runtime.getURL("icons/flags/mt.svg"),
-    AD: chrome.runtime.getURL("icons/flags/ad.svg"),
-    ZA: chrome.runtime.getURL("icons/flags/za.svg"),
-    IE: chrome.runtime.getURL("icons/flags/ie.svg"),
-    RS: chrome.runtime.getURL("icons/flags/rs.svg"),
+  const languages = HIT.LANGUAGES;
+  const legacyFavoriteMap = {
+    pt: "pt-BR",
+    zh: "zh-CN",
+    no: "nb",
+    fil: "tl",
+    iw: "he",
+    in: "id",
   };
 
   let selectedLangCode;
-  let favorites;
-  let isDark;
+  let favorites = [];
+  let isDark = false;
+  let themeSource = "system";
   let flagEmojiSupported = true;
   let searchTerm = "";
+  let statusInterval = null;
 
   const body = document.body;
   const themeToggle = document.getElementById("themeToggle");
@@ -132,222 +47,328 @@ document.addEventListener("DOMContentLoaded", async () => {
   const favoritesSection = document.getElementById("favoritesSection");
   const favoritesList = document.getElementById("favoritesList");
   const allLanguages = document.getElementById("allLanguages");
+  const translatePageBtn = document.getElementById("translatePageBtn");
+  const translateSelectionBtn = document.getElementById("translateSelectionBtn");
+  const revertBtn = document.getElementById("revertBtn");
+  const statusLine = document.getElementById("statusLine");
+  const shortcutsBtn = document.getElementById("shortcutsBtn");
+  const shortcutSelectionKeys = document.getElementById(
+    "shortcutSelectionKeys",
+  );
+  const shortcutPageKeys = document.getElementById("shortcutPageKeys");
+  const versionLabel = document.getElementById("versionLabel");
 
-  // --- Preference Management ---
+  versionLabel.textContent = "v" + chrome.runtime.getManifest().version;
+
+  // -------------------------------------------------------------------------
+  // Preferences
+  // -------------------------------------------------------------------------
+
   async function savePreferences() {
-    // Map UI codes to Google Translate API codes
-    const langCodeMap = {
-      "pt-BR": "pt",
-      "pt-PT": "pt",
-      "zh-CN": "zh-CN",
-      "zh-TW": "zh-TW",
-      nb: "no", // Google Translate uses 'no' for Norwegian
-      // Note: 'tl' works fine for Filipino in the free API (fil also works)
-    };
-
-    const targetLang = langCodeMap[selectedLangCode] || selectedLangCode;
-
-    const prefs = {
+    await chrome.storage.sync.set({
       theme: isDark ? "dark" : "light",
+      themeSource,
       favoriteLangs: favorites,
-      targetLanguage: targetLang,
+      targetLanguage: HIT.toGoogleCode(selectedLangCode),
       uiLanguage: currentLanguage,
-    };
-    await chrome.storage.sync.set(prefs);
+    });
+  }
+
+  function normalizeFavorites(list) {
+    const result = [];
+    for (const code of Array.isArray(list) ? list : []) {
+      const mapped = legacyFavoriteMap[code] || code;
+      const ui =
+        HIT.toUiCode(mapped) ||
+        (languages.some((language) => language.code === mapped)
+          ? mapped
+          : null);
+      if (ui && !result.includes(ui)) result.push(ui);
+    }
+    return result;
   }
 
   async function loadPreferences() {
-    // Detect system theme
     const systemPrefersDark = window.matchMedia(
       "(prefers-color-scheme: dark)",
     ).matches;
-
-    // Detect system language
-    const systemLang = getSystemLanguage();
+    const systemLanguage = getSystemLanguage();
+    const fallbackUiCode =
+      HIT.toUiCode(systemLanguage) || HIT.normalizePageLang(systemLanguage) || "en";
 
     const data = await chrome.storage.sync.get({
       theme: systemPrefersDark ? "dark" : "light",
+      themeSource: "system",
       favoriteLangs: ["en", "es"],
-      targetLanguage: systemLang,
-      uiLanguage: systemLang,
+      targetLanguage: HIT.toGoogleCode(fallbackUiCode),
+      uiLanguage: fallbackUiCode,
     });
 
-    isDark = data.theme === "dark";
-    favorites = data.favoriteLangs;
-    currentLanguage = data.uiLanguage;
+    themeSource = data.themeSource === "manual" ? "manual" : "system";
+    isDark =
+      themeSource === "system" ? systemPrefersDark : data.theme === "dark";
+    favorites = normalizeFavorites(data.favoriteLangs);
+    currentLanguage = data.uiLanguage || fallbackUiCode;
 
-    // Map stored language codes back to UI codes
-    const storedToUIMap = {
-      pt: "pt-BR",
-      no: "nb",
-    };
-
-    let targetLang = data.targetLanguage;
-    if (storedToUIMap[targetLang]) {
-      targetLang = storedToUIMap[targetLang];
-    }
-
-    const matchingLang =
-      languages.find((l) => l.code === targetLang) ||
-      languages.find((l) => l.code.startsWith(targetLang)) ||
+    const uiCode =
+      HIT.toUiCode(data.targetLanguage) ||
+      HIT.normalizePageLang(data.targetLanguage) ||
+      fallbackUiCode;
+    const matchingLanguage =
+      languages.find((language) => language.code === uiCode) ||
+      languages.find(
+        (language) =>
+          HIT.baseLang(language.code) === HIT.baseLang(uiCode),
+      ) ||
+      languages.find((language) => language.code === "en") ||
       languages[0];
-    selectedLangCode = matchingLang.code;
+    selectedLangCode = matchingLanguage.code;
 
     updateUIForPreferences();
-    applyTranslations(); // Apply UI translations after loading preferences
+    await refreshShortcutLabels();
   }
 
   function updateUIForPreferences() {
     body.className = isDark ? "dark" : "light";
     themeToggle.textContent = isDark ? "☀️" : "🌙";
+    themeToggle.setAttribute(
+      "aria-label",
+      isDark ? "Switch to light theme" : "Switch to dark theme",
+    );
 
-    const lang = languages.find((l) => l.code === selectedLangCode);
-    if (lang) {
-      setFlagContent(langFlag, lang.flag);
-      langName.textContent = lang.name;
+    const language = languages.find(
+      (item) => item.code === selectedLangCode,
+    );
+    if (language) {
+      setFlagContent(langFlag, language.flag);
+      langName.textContent = language.name;
     }
 
-    applyTranslations(); // Re-apply translations when theme or language changes
+    applyTranslations();
   }
 
-  function countryCodeToEmoji(countryCode) {
-    const base = 0x1f1e6 - "A".charCodeAt(0);
-    return (
-      String.fromCodePoint(base + countryCode.charCodeAt(0)) +
-      String.fromCodePoint(base + countryCode.charCodeAt(1))
-    );
-  }
+  // -------------------------------------------------------------------------
+  // Theme
+  // -------------------------------------------------------------------------
 
-  // --- UI Logic ---
   function toggleTheme() {
     isDark = !isDark;
+    themeSource = "manual";
     body.className = isDark ? "dark" : "light";
     themeToggle.textContent = isDark ? "☀️" : "🌙";
+    themeToggle.setAttribute(
+      "aria-label",
+      isDark ? "Switch to light theme" : "Switch to dark theme",
+    );
     savePreferences();
   }
 
-  async function toggleFavorite(code) {
+  // -------------------------------------------------------------------------
+  // Language list
+  // -------------------------------------------------------------------------
+
+  function toggleFavorite(code) {
     const index = favorites.indexOf(code);
     if (index > -1) {
       favorites.splice(index, 1);
     } else {
       favorites.push(code);
     }
-    await savePreferences();
+    savePreferences();
     renderLanguages();
   }
 
   async function selectLanguage(code) {
     selectedLangCode = code;
-    const lang = languages.find((l) => l.code === code);
-    setFlagContent(langFlag, lang.flag);
-    langName.textContent = lang.name;
-    dropdown.classList.remove("active");
+    const language = languages.find((item) => item.code === code);
+    if (language) {
+      setFlagContent(langFlag, language.flag);
+      langName.textContent = language.name;
+    }
+    closeDropdown();
     searchBox.value = "";
     searchTerm = "";
     await savePreferences();
     renderLanguages();
   }
 
+  function closeDropdown() {
+    dropdown.classList.remove("active");
+    selectedLangBtn.setAttribute("aria-expanded", "false");
+  }
+
+  function openDropdown() {
+    dropdown.classList.add("active");
+    selectedLangBtn.setAttribute("aria-expanded", "true");
+    setTimeout(() => searchBox.focus(), 60);
+  }
+
   function renderLanguages() {
     favoritesList.innerHTML = "";
     allLanguages.innerHTML = "";
 
+    const term = searchTerm.toLowerCase();
     const filtered = languages.filter(
-      (lang) =>
-        lang.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        lang.code.toLowerCase().includes(searchTerm.toLowerCase()),
+      (language) =>
+        language.name.toLowerCase().includes(term) ||
+        language.code.toLowerCase().includes(term) ||
+        language.google.toLowerCase().includes(term),
     );
 
-    const favLangs = filtered.filter((lang) =>
-      favorites.includes(lang.code.split("-")[0]),
+    const favoriteLanguages = filtered.filter((language) =>
+      favorites.includes(language.code),
     );
 
-    if (favLangs.length > 0 && !searchTerm) {
+    if (favoriteLanguages.length > 0 && !searchTerm) {
       favoritesSection.style.display = "block";
-      favLangs.forEach((lang) => {
-        favoritesList.appendChild(createLanguageOption(lang));
+      favoriteLanguages.forEach((language) => {
+        favoritesList.appendChild(createLanguageOption(language));
       });
     } else {
       favoritesSection.style.display = "none";
     }
 
-    filtered.forEach((lang) => {
-      allLanguages.appendChild(createLanguageOption(lang));
+    filtered.forEach((language) => {
+      allLanguages.appendChild(createLanguageOption(language));
     });
   }
 
-  function createLanguageOption(lang) {
+  function createLanguageOption(language) {
     const option = document.createElement("div");
     option.className =
-      "language-option" + (lang.code === selectedLangCode ? " selected" : "");
+      "language-option" +
+      (language.code === selectedLangCode ? " selected" : "");
+    option.setAttribute("role", "option");
+    option.setAttribute(
+      "aria-selected",
+      language.code === selectedLangCode ? "true" : "false",
+    );
+    option.tabIndex = 0;
 
     const leftContent = document.createElement("div");
     leftContent.className = "left-content";
 
     const flag = document.createElement("span");
     flag.className = "flag";
-    setFlagContent(flag, lang.flag);
+    setFlagContent(flag, language.flag);
 
     const name = document.createElement("span");
-    name.textContent = lang.name;
+    name.textContent = language.name;
 
     leftContent.appendChild(flag);
     leftContent.appendChild(name);
 
-    const star = document.createElement("div");
-    star.className =
-      "star" + (favorites.includes(lang.code.split("-")[0]) ? " active" : "");
+    const isFavorite = favorites.includes(language.code);
+    const star = document.createElement("span");
+    star.className = "star" + (isFavorite ? " active" : "");
     star.textContent = "♥";
-    star.addEventListener("click", (e) => {
-      e.stopPropagation();
-      toggleFavorite(lang.code.split("-")[0]);
+    star.setAttribute("role", "button");
+    star.tabIndex = 0;
+    star.setAttribute("aria-pressed", isFavorite ? "true" : "false");
+    star.setAttribute("aria-label", "Favorite " + language.name);
+
+    const activateFavorite = (event) => {
+      event.stopPropagation();
+      event.preventDefault();
+      toggleFavorite(language.code);
+    };
+    star.addEventListener("click", activateFavorite);
+    star.addEventListener("keydown", (event) => {
+      if (event.key === "Enter" || event.key === " ") activateFavorite(event);
     });
 
     option.appendChild(leftContent);
     option.appendChild(star);
 
-    option.addEventListener("click", () => selectLanguage(lang.code));
+    option.addEventListener("click", () => selectLanguage(language.code));
+    option.addEventListener("keydown", (event) => {
+      if (event.key === "Enter" || event.key === " ") {
+        event.preventDefault();
+        selectLanguage(language.code);
+      }
+    });
 
     return option;
   }
 
-  // --- Event Listeners ---
-  themeToggle.addEventListener("click", toggleTheme);
+  // -------------------------------------------------------------------------
+  // Active tab actions and status
+  // -------------------------------------------------------------------------
 
-  selectedLangBtn.addEventListener("click", () => {
-    dropdown.classList.toggle("active");
-    if (dropdown.classList.contains("active")) {
-      setTimeout(() => searchBox.focus(), 100);
+  async function sendToActiveTab(message) {
+    try {
+      const [tab] = await chrome.tabs.query({
+        active: true,
+        currentWindow: true,
+      });
+      if (!tab || typeof tab.id !== "number") return null;
+      return await chrome.tabs.sendMessage(tab.id, message);
+    } catch (error) {
+      return null;
     }
-  });
+  }
 
-  searchBox.addEventListener("input", (e) => {
-    searchTerm = e.target.value;
-    renderLanguages();
-  });
+  function setStatus(text, kind) {
+    statusLine.textContent = text;
+    statusLine.className = "status-line" + (kind ? " " + kind : "");
+  }
 
-  searchBox.addEventListener("click", (e) => e.stopPropagation());
+  async function refreshStatus() {
+    const status = await sendToActiveTab({ action: "get-status" });
+    const supported = Boolean(status && status.canTranslate);
 
-  document.addEventListener("click", (e) => {
-    if (!e.target.closest(".language-selector")) {
-      dropdown.classList.remove("active");
+    translatePageBtn.disabled =
+      !supported || status.isPageTranslated || status.isTranslatingPage;
+    translateSelectionBtn.disabled = !supported || status.isTranslatingPage;
+    revertBtn.disabled =
+      !supported ||
+      (!status.isPageTranslated &&
+        !status.isSelectionTranslated &&
+        !status.isTranslatingPage);
+
+    if (!supported) {
+      setStatus(t("popup.statusUnavailable"), "muted");
+    } else if (status.isTranslatingPage) {
+      setStatus(t("popup.statusTranslating"), "busy");
+    } else if (status.isPagePartial) {
+      setStatus(t("popup.statusPartial"), "warning");
+    } else if (status.isPageTranslated) {
+      setStatus(t("popup.statusTranslated"), "active");
+    } else if (status.isSelectionTranslated) {
+      setStatus(t("popup.statusSelectionTranslated"), "active");
+    } else {
+      setStatus(t("popup.statusIdle"), "muted");
     }
-  });
+  }
 
-  // --- Initial Load ---
-  flagEmojiSupported = detectFlagEmojiSupport();
-  await loadPreferences();
-  renderLanguages();
+  async function refreshShortcutLabels() {
+    const fallbackSelection = "Shift + Alt + Q";
+    const fallbackPage = "Shift + Alt + W";
+    try {
+      const commands = await chrome.commands.getAll();
+      const pageCommand = commands.find(
+        (command) => command.name === "translate-page",
+      );
+      const selectionCommand = commands.find(
+        (command) => command.name === "translate-selection",
+      );
+      // The page action has an in-page fallback, so show the working key even
+      // when Chromium/Edge refuses to assign the extension command.
+      shortcutPageKeys.textContent = pageCommand?.shortcut
+        ? pageCommand.shortcut.replace(/\+/g, " + ")
+        : fallbackPage;
+      shortcutSelectionKeys.textContent = selectionCommand?.shortcut
+        ? selectionCommand.shortcut.replace(/\+/g, " + ")
+        : t("popup.shortcutNotSet");
+    } catch (error) {
+      shortcutPageKeys.textContent = fallbackPage;
+      shortcutSelectionKeys.textContent = fallbackSelection;
+    }
+  }
 
-  // Listen for system theme changes
-  window
-    .matchMedia("(prefers-color-scheme: dark)")
-    .addEventListener("change", (e) => {
-      isDark = e.matches;
-      updateUIForPreferences();
-      savePreferences();
-    });
+  // -------------------------------------------------------------------------
+  // Flags
+  // -------------------------------------------------------------------------
 
   function detectFlagEmojiSupport() {
     const testSpan = document.createElement("span");
@@ -355,18 +376,13 @@ document.addEventListener("DOMContentLoaded", async () => {
     testSpan.style.visibility = "hidden";
     testSpan.style.fontSize = "20px";
     testSpan.style.lineHeight = "1";
-    testSpan.textContent = countryCodeToEmoji("BR");
+    testSpan.textContent = HIT.flagEmoji("BR");
     document.body.appendChild(testSpan);
     const emojiWidth = testSpan.offsetWidth;
     testSpan.textContent = "BR";
     const textWidth = testSpan.offsetWidth;
     testSpan.remove();
     return emojiWidth !== textWidth;
-  }
-
-  function getFlagAsset(code) {
-    if (!code) return undefined;
-    return FLAG_SOURCES[code.toUpperCase()];
   }
 
   function setFlagContent(element, countryCode) {
@@ -379,36 +395,114 @@ document.addEventListener("DOMContentLoaded", async () => {
       return;
     }
 
-    const assetPath = getFlagAsset(countryCode);
+    const assetPath = HIT.getFlagUrl(countryCode);
     if (assetPath) {
       element.classList.add("has-image");
-      const img = document.createElement("img");
-      img.src = assetPath;
-      img.alt = countryCodeToEmoji(countryCode);
-      img.width = 36;
-      img.height = 36;
-      img.decoding = "async";
-      img.loading = "lazy";
-      element.appendChild(img);
+      const image = document.createElement("img");
+      image.src = assetPath;
+      image.alt = HIT.flagEmoji(countryCode);
+      image.width = 36;
+      image.height = 36;
+      image.decoding = "async";
+      image.loading = "lazy";
+      element.appendChild(image);
       return;
     }
 
-    if (flagEmojiSupported) {
-      element.textContent = countryCodeToEmoji(countryCode);
-    } else {
-      element.textContent = countryCode;
-    }
+    element.textContent = flagEmojiSupported
+      ? HIT.flagEmoji(countryCode)
+      : countryCode;
   }
 
-  // Listen for system language changes
-  window.addEventListener("change", (e) => {
-    if (e.matches === false) return; // Only process when media query becomes true
-    // Re-detect system language and update UI
-    const newSystemLang = getSystemLanguage();
-    if (newSystemLang !== currentLanguage) {
-      currentLanguage = newSystemLang;
-      applyTranslations();
-      savePreferences();
+  // -------------------------------------------------------------------------
+  // Event listeners
+  // -------------------------------------------------------------------------
+
+  themeToggle.addEventListener("click", toggleTheme);
+
+  selectedLangBtn.addEventListener("click", () => {
+    if (dropdown.classList.contains("active")) closeDropdown();
+    else openDropdown();
+  });
+
+  searchBox.addEventListener("input", (event) => {
+    searchTerm = event.target.value;
+    renderLanguages();
+  });
+
+  searchBox.addEventListener("click", (event) => event.stopPropagation());
+  searchBox.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") {
+      closeDropdown();
+      selectedLangBtn.focus();
     }
+  });
+
+  document.addEventListener("click", (event) => {
+    if (!event.target.closest(".language-selector")) closeDropdown();
+  });
+
+  dropdown.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") {
+      closeDropdown();
+      selectedLangBtn.focus();
+      return;
+    }
+    if (event.key !== "ArrowDown" && event.key !== "ArrowUp") return;
+    const options = Array.from(
+      dropdown.querySelectorAll(".language-option"),
+    );
+    if (!options.length) return;
+    const index = options.indexOf(document.activeElement);
+    const next =
+      event.key === "ArrowDown"
+        ? options[(index + 1) % options.length]
+        : options[(index - 1 + options.length) % options.length];
+    event.preventDefault();
+    next.focus();
+  });
+
+  translatePageBtn.addEventListener("click", async () => {
+    await sendToActiveTab({ action: "translate-full-page" });
+    setTimeout(refreshStatus, 300);
+    setTimeout(refreshStatus, 1200);
+  });
+
+  translateSelectionBtn.addEventListener("click", async () => {
+    await sendToActiveTab({ action: "translate-selection" });
+    setTimeout(refreshStatus, 300);
+    setTimeout(refreshStatus, 1200);
+  });
+
+  revertBtn.addEventListener("click", async () => {
+    await sendToActiveTab({ action: "revert-translation" });
+    setTimeout(refreshStatus, 300);
+  });
+
+  shortcutsBtn.addEventListener("click", () => {
+    chrome.tabs.create({ url: "chrome://extensions/shortcuts" });
+  });
+
+  window
+    .matchMedia("(prefers-color-scheme: dark)")
+    .addEventListener("change", (event) => {
+      if (themeSource !== "system") return;
+      isDark = event.matches;
+      updateUIForPreferences();
+      savePreferences();
+    });
+
+  // -------------------------------------------------------------------------
+  // Initial load
+  // -------------------------------------------------------------------------
+
+  flagEmojiSupported = detectFlagEmojiSupport();
+  await loadPreferences();
+  renderLanguages();
+  await refreshStatus();
+
+  statusInterval = setInterval(refreshStatus, 1500);
+  window.addEventListener("unload", () => {
+    if (statusInterval) clearInterval(statusInterval);
   });
 });

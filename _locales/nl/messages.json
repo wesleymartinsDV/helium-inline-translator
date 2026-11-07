@@ -1,5 +1,59 @@
 {
   "appDesc": {
     "message": "Vertaal pagina's of geselecteerde tekst zonder pop-ups, strak en met snelle sneltoetsen."
+  },
+  "actionTitle": {
+    "message": "Helium Inline Translator"
+  },
+  "menuTranslatePage": {
+    "message": "Volledige pagina vertalen"
+  },
+  "menuTranslateSelection": {
+    "message": "Geselecteerde tekst vertalen"
+  },
+  "commandTranslatePage": {
+    "message": "Huidige pagina vertalen"
+  },
+  "commandTranslateSelection": {
+    "message": "Geselecteerde tekst vertalen"
+  },
+  "toastTranslating": {
+    "message": "Vertalen…"
+  },
+  "toastTranslated": {
+    "message": "Pagina vertaald."
+  },
+  "toastReverted": {
+    "message": "Oorspronkelijke pagina hersteld."
+  },
+  "toastSelectionTranslated": {
+    "message": "Selectie vertaald."
+  },
+  "toastNoSelection": {
+    "message": "Selecteer eerst tekst."
+  },
+  "toastFailed": {
+    "message": "Vertalen mislukt. Probeer het opnieuw."
+  },
+  "toastNothing": {
+    "message": "Geen vertaalbare tekst gevonden."
+  },
+  "toastAlready": {
+    "message": "Deze pagina is al vertaald."
+  },
+  "toastCancelled": {
+    "message": "Vertaling geannuleerd."
+  },
+  "toastCancel": {
+    "message": "Annuleren"
+  },
+  "toastNothingToRevert": {
+    "message": "Niets om ongedaan te maken."
+  },
+  "toastPartial": {
+    "message": "Een deel van de tekst kon niet worden vertaald. Druk nogmaals op de sneltoets om terug te draaien."
+  },
+  "toastRevert": {
+    "message": "Ongedaan maken"
   }
 }

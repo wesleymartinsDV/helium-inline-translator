@@ -1,0 +1,16 @@
+{
+  "name": "helium-inline-translator",
+  "version": "1.2.0",
+  "private": true,
+  "description": "Inline page and selection translator for Chromium browsers, with no disruptive popups.",
+  "license": "GPL-3.0",
+  "homepage": "https://github.com/wesleymartinsDV/helium-translator-inline",
+  "scripts": {
+    "check": "node scripts/check.mjs",
+    "test": "node --test test/shared.test.mjs",
+    "verify": "npm run check && npm test"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

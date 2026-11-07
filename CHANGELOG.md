@@ -2,9 +2,50 @@
 
 This document describes the steps to create a web page and text snippet translation extension, focusing on usability and in-page translation.
 
+> Historical note: the planning sections at the bottom describe the original design. See `README.md` for the current architecture and behavior.
+
 ---
 
 ## Changelog / Change History
+
+### v1.2.0 (November 7, 2026) - Reliability Overhaul, Shadow DOM and Embedded Content
+
+#### Added:
+- **Popup actions and status**: translate page, translate selection, revert, live status line, dynamic shortcut labels, and dynamic version.
+- **Progress and cancellation** for full-page translation, with per-tab badge states.
+- **Dynamic-content translation** and SPA navigation detection so translated pages stay translated and reset cleanly after navigation.
+- **`src/shared.js`** as the single language registry for the service worker, content script, and popup.
+- **Verification tooling**: `npm run verify`, Node tests for the shared registry, and a GitHub Actions CI workflow.
+- New localized strings for toasts, context menus, commands, and the popup across the supported locales.
+
+#### Changed:
+- Translation transport now uses `POST` to `translate.googleapis.com/translate_a/single` with a timeout, bounded retries, and structured responses.
+- **`pt-PT`** is now sent as `pt-PT` (instead of collapsing to `pt`) while `pt-BR` continues to use `pt`.
+- Selection translation is range-accurate and can translate part of a text node without replacing the entire node.
+- Revert only restores a node when it still contains the value written by the extension, protecting live/SPA content.
+- Keyboard shortcuts now use `manifest.commands` (`Alt + Shift + Q` and `Alt + Shift + W` by default) and are customizable at `chrome://extensions/shortcuts`. Because Chromium/Edge may refuse to assign `Alt + Shift + W`, the page shortcut also works through an in-page fallback listener.
+- Popup layout is scrollable, has explicit focus states, and restores preferences safely across legacy language codes.
+- `ui/i18n.js` falls back to English and then to the key when a translation is missing.
+
+#### Fixed:
+- Full-page translation no longer overwrites nodes that changed while a request was in flight.
+- A single failed batch no longer cancels the whole page translation; remaining batches finish, partial results are reported as partial, and successful translations stay revertible.
+- Pressing the page shortcut while translation is running now cancels it and restores any text translated so far; pressing it after a full or partial translation reverts the page.
+- `Alt + Shift + W` is sometimes not assigned by Chromium/Edge as an extension command, so the page shortcut also works through an in-page fallback listener.
+- Full-page translation now also reaches same- and cross-origin iframes, so embedded stories/widgets are no longer left in the original language.
+- Full-page translation now walks open shadow roots, so widgets that render inside a shadow DOM (for example BBC's AQI banner) are translated, kept up to date by the mutation observer, and reverted with the rest of the page. Selection translation also sees shadow content.
+- Text added while the first translation pass is running is picked up by a sweep once the pass completes.
+- Batch translation recovers by falling back to smaller requests when a separator is translated or dropped.
+- Context menus and background error strings use `chrome.i18n` instead of Portuguese-only text.
+- Badge state is cleared on tab activation/navigation and no longer gets stuck after a failed action.
+
+#### Removed:
+- The automatic "Translate this page?" prompt bubble, page-language detection, and per-site prompt rules (`siteRules`), along with their localized strings and popup preferences.
+- Unused `activeTab` and `scripting` permissions.
+- Unnecessary `web_accessible_resources`.
+- Dead files: `ui/balloon.*`, empty `css/inline.css`, and `icons/icon128.8.png`.
+
+---
 
 ### v1.1.1 (January 2026) - Major Language Expansion and Improvements
 

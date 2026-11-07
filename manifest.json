@@ -2,25 +2,25 @@
   "manifest_version": 3,
   "name": "Helium Inline Translator",
   "default_locale": "en",
-  "version": "1.1.1",
+  "version": "1.2.0",
   "description": "__MSG_appDesc__",
-  "permissions": [
-    "contextMenus",
-    "activeTab",
-    "storage",
-    "scripting"
-  ],
+  "minimum_chrome_version": "102",
+  "homepage_url": "https://github.com/wesleymartinsDV/helium-translator-inline",
+  "permissions": ["contextMenus", "storage"],
   "background": {
     "service_worker": "src/background.js"
   },
   "content_scripts": [
     {
       "matches": ["<all_urls>"],
-      "js": ["src/content.js"]
+      "js": ["src/shared.js", "src/content.js"],
+      "run_at": "document_idle",
+      "all_frames": true
     }
   ],
   "action": {
     "default_popup": "ui/popup.html",
+    "default_title": "__MSG_actionTitle__",
     "default_icon": {
       "16": "icons/icon16.png",
       "48": "icons/icon48.png",
@@ -32,14 +32,20 @@
     "48": "icons/icon48.png",
     "128": "icons/icon128.png"
   },
-  "web_accessible_resources": [
-    {
-      "resources": ["ui/balloon.html", "ui/balloon.css", "ui/balloon.js"],
-      "matches": ["<all_urls>"]
+  "commands": {
+    "translate-page": {
+      "suggested_key": {
+        "default": "Alt+Shift+W",
+        "mac": "Alt+Shift+W"
+      },
+      "description": "__MSG_commandTranslatePage__"
     },
-    {
-      "resources": ["icons/flags/*.svg"],
-      "matches": ["<all_urls>"]
+    "translate-selection": {
+      "suggested_key": {
+        "default": "Alt+Shift+Q",
+        "mac": "Alt+Shift+Q"
+      },
+      "description": "__MSG_commandTranslateSelection__"
     }
-  ]
+  }
 }

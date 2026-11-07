@@ -1,5 +1,8 @@
 {
   "appDesc": {
     "message": "Käännä sivuja tai valittua tekstiä ilman ponnahdusikkunoita, selkeästi ja nopeilla pikanäppäimillä."
+  },
+  "actionTitle": {
+    "message": "Helium Inline Translator"
   }
 }

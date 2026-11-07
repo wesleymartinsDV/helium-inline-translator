@@ -23,5 +23,8 @@ yarn-error.log*
 *.zip
 *.crx
 
+# Installed dependencies (the project has none at runtime)
+node_modules/
+
 # Personal files
 zPessoal/

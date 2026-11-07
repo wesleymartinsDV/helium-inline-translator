@@ -1,5 +1,14 @@
 {
   "appDesc": {
     "message": "Traduci pagine o testi selezionati senza pop-up, in modo pulito, con scorciatoie rapide."
+  },
+  "actionTitle": {
+    "message": "Helium Inline Translator"
+  },
+  "toastPartial": {
+    "message": "Parte del testo non è stato possibile tradurlo. Premi di nuovo la scorciatoia per annullare."
+  },
+  "toastRevert": {
+    "message": "Annulla"
   }
 }

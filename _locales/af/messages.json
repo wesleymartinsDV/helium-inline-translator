@@ -1,5 +1,8 @@
 {
   "appDesc": {
     "message": "Vertaal bladsye of geselekteerde teks skoon sonder opspringvensters deur vinnige kortpaaie te gebruik."
+  },
+  "actionTitle": {
+    "message": "Helium Inline Translator"
   }
 }

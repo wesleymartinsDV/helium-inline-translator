@@ -1,5 +1,59 @@
 {
   "appDesc": {
     "message": "Переводите страницы или выделенный текст без всплывающих окон, чисто и с быстрыми сочетаниями клавиш."
+  },
+  "actionTitle": {
+    "message": "Helium Inline Translator"
+  },
+  "menuTranslatePage": {
+    "message": "Перевести всю страницу"
+  },
+  "menuTranslateSelection": {
+    "message": "Перевести выделенный текст"
+  },
+  "commandTranslatePage": {
+    "message": "Перевести текущую страницу"
+  },
+  "commandTranslateSelection": {
+    "message": "Перевести выделенный текст"
+  },
+  "toastTranslating": {
+    "message": "Перевод…"
+  },
+  "toastTranslated": {
+    "message": "Страница переведена."
+  },
+  "toastReverted": {
+    "message": "Исходная страница восстановлена."
+  },
+  "toastSelectionTranslated": {
+    "message": "Выделение переведено."
+  },
+  "toastNoSelection": {
+    "message": "Сначала выделите текст."
+  },
+  "toastFailed": {
+    "message": "Не удалось перевести. Повторите попытку."
+  },
+  "toastNothing": {
+    "message": "Переводимый текст не найден."
+  },
+  "toastAlready": {
+    "message": "Эта страница уже переведена."
+  },
+  "toastCancelled": {
+    "message": "Перевод отменён."
+  },
+  "toastCancel": {
+    "message": "Отмена"
+  },
+  "toastNothingToRevert": {
+    "message": "Нечего отменять."
+  },
+  "toastPartial": {
+    "message": "Часть текста перевести не удалось. Нажмите сочетание клавиш ещё раз, чтобы отменить перевод."
+  },
+  "toastRevert": {
+    "message": "Отменить"
   }
 }

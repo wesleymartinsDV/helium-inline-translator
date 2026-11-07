@@ -1,5 +1,59 @@
 {
   "appDesc": {
     "message": "ポップアップなしでページや選択したテキストをすっきり翻訳し、素早いショートカットで操作できます。"
+  },
+  "actionTitle": {
+    "message": "Helium Inline Translator"
+  },
+  "menuTranslatePage": {
+    "message": "ページ全体を翻訳"
+  },
+  "menuTranslateSelection": {
+    "message": "選択したテキストを翻訳"
+  },
+  "commandTranslatePage": {
+    "message": "現在のページを翻訳"
+  },
+  "commandTranslateSelection": {
+    "message": "選択したテキストを翻訳"
+  },
+  "toastTranslating": {
+    "message": "翻訳中…"
+  },
+  "toastTranslated": {
+    "message": "ページを翻訳しました。"
+  },
+  "toastReverted": {
+    "message": "元のページに戻しました。"
+  },
+  "toastSelectionTranslated": {
+    "message": "選択範囲を翻訳しました。"
+  },
+  "toastNoSelection": {
+    "message": "先にテキストを選択してください。"
+  },
+  "toastFailed": {
+    "message": "翻訳に失敗しました。もう一度お試しください。"
+  },
+  "toastNothing": {
+    "message": "翻訳可能なテキストが見つかりません。"
+  },
+  "toastAlready": {
+    "message": "このページはすでに翻訳されています。"
+  },
+  "toastCancelled": {
+    "message": "翻訳をキャンセルしました。"
+  },
+  "toastCancel": {
+    "message": "キャンセル"
+  },
+  "toastNothingToRevert": {
+    "message": "元に戻すものはありません。"
+  },
+  "toastPartial": {
+    "message": "一部のテキストを翻訳できませんでした。もう一度ショートカットを押すと元に戻ります。"
+  },
+  "toastRevert": {
+    "message": "元に戻す"
   }
 }
