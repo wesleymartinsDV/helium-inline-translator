@@ -1,5 +1,8 @@
 {
   "appDesc": {
     "message": "Fordítson oldalakat vagy kijelölt szöveget tisztán, felugró ablakok nélkül, gyorsbillentyűkkel."
+  },
+  "actionTitle": {
+    "message": "Helium Inline Translator"
   }
 }

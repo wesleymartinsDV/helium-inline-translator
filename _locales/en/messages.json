@@ -1,5 +1,59 @@
 {
   "appDesc": {
     "message": "Translate pages or selected text cleanly without popups using quick shortcuts."
+  },
+  "actionTitle": {
+    "message": "Helium Inline Translator"
+  },
+  "menuTranslatePage": {
+    "message": "Translate entire page"
+  },
+  "menuTranslateSelection": {
+    "message": "Translate selected text"
+  },
+  "commandTranslatePage": {
+    "message": "Translate the current page"
+  },
+  "commandTranslateSelection": {
+    "message": "Translate the selected text"
+  },
+  "toastTranslating": {
+    "message": "Translating…"
+  },
+  "toastTranslated": {
+    "message": "Page translated."
+  },
+  "toastReverted": {
+    "message": "Original page restored."
+  },
+  "toastSelectionTranslated": {
+    "message": "Selection translated."
+  },
+  "toastNoSelection": {
+    "message": "Select some text first."
+  },
+  "toastFailed": {
+    "message": "Translation failed. Try again."
+  },
+  "toastNothing": {
+    "message": "No translatable text found."
+  },
+  "toastAlready": {
+    "message": "This page is already translated."
+  },
+  "toastCancelled": {
+    "message": "Translation cancelled."
+  },
+  "toastCancel": {
+    "message": "Cancel"
+  },
+  "toastNothingToRevert": {
+    "message": "Nothing to revert."
+  },
+  "toastPartial": {
+    "message": "Some text could not be translated. Press the shortcut again to revert."
+  },
+  "toastRevert": {
+    "message": "Revert"
   }
 }

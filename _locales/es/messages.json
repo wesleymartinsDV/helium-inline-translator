@@ -1,5 +1,59 @@
 {
   "appDesc": {
     "message": "Traduce páginas o textos seleccionados sin ventanas emergentes y de forma limpia con atajos rápidos."
+  },
+  "actionTitle": {
+    "message": "Helium Inline Translator"
+  },
+  "menuTranslatePage": {
+    "message": "Traducir página completa"
+  },
+  "menuTranslateSelection": {
+    "message": "Traducir texto seleccionado"
+  },
+  "commandTranslatePage": {
+    "message": "Traducir la página actual"
+  },
+  "commandTranslateSelection": {
+    "message": "Traducir el texto seleccionado"
+  },
+  "toastTranslating": {
+    "message": "Traduciendo…"
+  },
+  "toastTranslated": {
+    "message": "Página traducida."
+  },
+  "toastReverted": {
+    "message": "Página original restaurada."
+  },
+  "toastSelectionTranslated": {
+    "message": "Selección traducida."
+  },
+  "toastNoSelection": {
+    "message": "Selecciona un texto primero."
+  },
+  "toastFailed": {
+    "message": "Error de traducción. Inténtalo de nuevo."
+  },
+  "toastNothing": {
+    "message": "No se encontró texto traducible."
+  },
+  "toastAlready": {
+    "message": "Esta página ya está traducida."
+  },
+  "toastCancelled": {
+    "message": "Traducción cancelada."
+  },
+  "toastCancel": {
+    "message": "Cancelar"
+  },
+  "toastNothingToRevert": {
+    "message": "Nada que revertir."
+  },
+  "toastPartial": {
+    "message": "No se pudo traducir parte del texto. Pulsa el atajo de nuevo para revertir."
+  },
+  "toastRevert": {
+    "message": "Revertir"
   }
 }

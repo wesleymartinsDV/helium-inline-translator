@@ -1,5 +1,59 @@
 {
   "appDesc": {
     "message": "Traduisez des pages ou des textes sélectionnés sans pop-ups, de manière épurée, avec des raccourcis rapides."
+  },
+  "actionTitle": {
+    "message": "Helium Inline Translator"
+  },
+  "menuTranslatePage": {
+    "message": "Traduire la page entière"
+  },
+  "menuTranslateSelection": {
+    "message": "Traduire le texte sélectionné"
+  },
+  "commandTranslatePage": {
+    "message": "Traduire la page actuelle"
+  },
+  "commandTranslateSelection": {
+    "message": "Traduire le texte sélectionné"
+  },
+  "toastTranslating": {
+    "message": "Traduction…"
+  },
+  "toastTranslated": {
+    "message": "Page traduite."
+  },
+  "toastReverted": {
+    "message": "Page d'origine restaurée."
+  },
+  "toastSelectionTranslated": {
+    "message": "Sélection traduite."
+  },
+  "toastNoSelection": {
+    "message": "Sélectionnez d'abord du texte."
+  },
+  "toastFailed": {
+    "message": "La traduction a échoué. Réessayez."
+  },
+  "toastNothing": {
+    "message": "Aucun texte traduisible trouvé."
+  },
+  "toastAlready": {
+    "message": "Cette page est déjà traduite."
+  },
+  "toastCancelled": {
+    "message": "Traduction annulée."
+  },
+  "toastCancel": {
+    "message": "Annuler"
+  },
+  "toastNothingToRevert": {
+    "message": "Rien à annuler."
+  },
+  "toastPartial": {
+    "message": "Une partie du texte n'a pas pu être traduite. Appuyez à nouveau sur le raccourci pour annuler."
+  },
+  "toastRevert": {
+    "message": "Annuler"
   }
 }

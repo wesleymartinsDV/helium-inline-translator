@@ -1,5 +1,59 @@
 {
   "appDesc": {
     "message": "Pop-up olmadan, temiz bir görünümle ve hızlı kısayollarla sayfaları veya seçili metni çevirin."
+  },
+  "actionTitle": {
+    "message": "Helium Inline Translator"
+  },
+  "menuTranslatePage": {
+    "message": "Tüm sayfayı çevir"
+  },
+  "menuTranslateSelection": {
+    "message": "Seçili metni çevir"
+  },
+  "commandTranslatePage": {
+    "message": "Geçerli sayfayı çevir"
+  },
+  "commandTranslateSelection": {
+    "message": "Seçili metni çevir"
+  },
+  "toastTranslating": {
+    "message": "Çevriliyor…"
+  },
+  "toastTranslated": {
+    "message": "Sayfa çevrildi."
+  },
+  "toastReverted": {
+    "message": "Orijinal sayfa geri yüklendi."
+  },
+  "toastSelectionTranslated": {
+    "message": "Seçim çevrildi."
+  },
+  "toastNoSelection": {
+    "message": "Önce metin seçin."
+  },
+  "toastFailed": {
+    "message": "Çeviri başarısız. Tekrar deneyin."
+  },
+  "toastNothing": {
+    "message": "Çevrilebilir metin bulunamadı."
+  },
+  "toastAlready": {
+    "message": "Bu sayfa zaten çevrildi."
+  },
+  "toastCancelled": {
+    "message": "Çeviri iptal edildi."
+  },
+  "toastCancel": {
+    "message": "İptal"
+  },
+  "toastNothingToRevert": {
+    "message": "Geri alınacak bir şey yok."
+  },
+  "toastPartial": {
+    "message": "Bazı metinler çevrilemedi. Geri almak için kısayola tekrar basın."
+  },
+  "toastRevert": {
+    "message": "Geri al"
   }
 }

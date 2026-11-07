@@ -1,5 +1,8 @@
 {
   "appDesc": {
     "message": "แปลหน้าเว็บหรือข้อความที่เลือกอย่างสะอาดโดยไม่มีป๊อปอัปโดยใช้ทางลัดด่วน"
+  },
+  "actionTitle": {
+    "message": "Helium Inline Translator"
   }
 }

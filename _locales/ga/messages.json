@@ -1,5 +1,8 @@
 {
   "appDesc": {
     "message": "Aistrigh leathanaigh nó téacs roghnaithe go néata gan fhuinneoga aníos ag baint úsáide as aicearraí tapa."
+  },
+  "actionTitle": {
+    "message": "Helium Inline Translator"
   }
 }

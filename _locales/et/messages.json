@@ -1,5 +1,8 @@
 {
   "appDesc": {
     "message": "Tõlkige lehti või valitud teksti puhtalt ilma hüpikakendeta, kasutades kiireid otseteid."
+  },
+  "actionTitle": {
+    "message": "Helium Inline Translator"
   }
 }

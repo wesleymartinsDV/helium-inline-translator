@@ -1,5 +1,59 @@
 {
   "appDesc": {
     "message": "Übersetze Seiten oder markierte Texte ohne Pop-ups, mit einem klaren Layout und schnellen Tastenkürzeln."
+  },
+  "actionTitle": {
+    "message": "Helium Inline Translator"
+  },
+  "menuTranslatePage": {
+    "message": "Ganze Seite übersetzen"
+  },
+  "menuTranslateSelection": {
+    "message": "Ausgewählten Text übersetzen"
+  },
+  "commandTranslatePage": {
+    "message": "Aktuelle Seite übersetzen"
+  },
+  "commandTranslateSelection": {
+    "message": "Ausgewählten Text übersetzen"
+  },
+  "toastTranslating": {
+    "message": "Wird übersetzt…"
+  },
+  "toastTranslated": {
+    "message": "Seite übersetzt."
+  },
+  "toastReverted": {
+    "message": "Originalseite wiederhergestellt."
+  },
+  "toastSelectionTranslated": {
+    "message": "Auswahl übersetzt."
+  },
+  "toastNoSelection": {
+    "message": "Wählen Sie zuerst Text aus."
+  },
+  "toastFailed": {
+    "message": "Übersetzung fehlgeschlagen. Versuchen Sie es erneut."
+  },
+  "toastNothing": {
+    "message": "Kein übersetzbarer Text gefunden."
+  },
+  "toastAlready": {
+    "message": "Diese Seite ist bereits übersetzt."
+  },
+  "toastCancelled": {
+    "message": "Übersetzung abgebrochen."
+  },
+  "toastCancel": {
+    "message": "Abbrechen"
+  },
+  "toastNothingToRevert": {
+    "message": "Nichts rückgängig zu machen."
+  },
+  "toastPartial": {
+    "message": "Ein Teil des Textes konnte nicht übersetzt werden. Drücke die Tastenkombination erneut, um die Übersetzung rückgängig zu machen."
+  },
+  "toastRevert": {
+    "message": "Rückgängig"
   }
 }

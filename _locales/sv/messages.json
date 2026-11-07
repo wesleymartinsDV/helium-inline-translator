@@ -1,5 +1,8 @@
 {
   "appDesc": {
     "message": "Översätt sidor eller markerad text utan popupfönster, rent och med snabba genvägar."
+  },
+  "actionTitle": {
+    "message": "Helium Inline Translator"
   }
 }

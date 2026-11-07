@@ -1,5 +1,59 @@
 {
   "appDesc": {
     "message": "Tłumacz strony lub zaznaczony tekst bez wyskakujących okien, przejrzyście i z szybkimi skrótami."
+  },
+  "actionTitle": {
+    "message": "Helium Inline Translator"
+  },
+  "menuTranslatePage": {
+    "message": "Przetłumacz całą stronę"
+  },
+  "menuTranslateSelection": {
+    "message": "Przetłumacz zaznaczony tekst"
+  },
+  "commandTranslatePage": {
+    "message": "Przetłumacz bieżącą stronę"
+  },
+  "commandTranslateSelection": {
+    "message": "Przetłumacz zaznaczony tekst"
+  },
+  "toastTranslating": {
+    "message": "Tłumaczenie…"
+  },
+  "toastTranslated": {
+    "message": "Strona przetłumaczona."
+  },
+  "toastReverted": {
+    "message": "Przywrócono oryginalną stronę."
+  },
+  "toastSelectionTranslated": {
+    "message": "Zaznaczenie przetłumaczone."
+  },
+  "toastNoSelection": {
+    "message": "Najpierw zaznacz tekst."
+  },
+  "toastFailed": {
+    "message": "Tłumaczenie nie powiodło się. Spróbuj ponownie."
+  },
+  "toastNothing": {
+    "message": "Nie znaleziono tekstu do przetłumaczenia."
+  },
+  "toastAlready": {
+    "message": "Ta strona jest już przetłumaczona."
+  },
+  "toastCancelled": {
+    "message": "Anulowano tłumaczenie."
+  },
+  "toastCancel": {
+    "message": "Anuluj"
+  },
+  "toastNothingToRevert": {
+    "message": "Nie ma nic do przywrócenia."
+  },
+  "toastPartial": {
+    "message": "Nie udało się przetłumaczyć części tekstu. Naciśnij skrót ponownie, aby cofnąć."
+  },
+  "toastRevert": {
+    "message": "Cofnij"
   }
 }

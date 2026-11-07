@@ -1,5 +1,8 @@
 {
   "appDesc": {
     "message": "Prevedite stranice ili odabrani tekst čisto bez skočnih prozora koristeći brze prečace."
+  },
+  "actionTitle": {
+    "message": "Helium Inline Translator"
   }
 }

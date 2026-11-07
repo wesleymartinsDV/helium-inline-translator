@@ -1,5 +1,59 @@
 {
   "appDesc": {
     "message": "無需彈出視窗，使用快捷鍵即可乾淨俐落地翻譯頁面或選取文字。"
+  },
+  "actionTitle": {
+    "message": "Helium Inline Translator"
+  },
+  "menuTranslatePage": {
+    "message": "翻譯整個頁面"
+  },
+  "menuTranslateSelection": {
+    "message": "翻譯選取文字"
+  },
+  "commandTranslatePage": {
+    "message": "翻譯目前頁面"
+  },
+  "commandTranslateSelection": {
+    "message": "翻譯選取文字"
+  },
+  "toastTranslating": {
+    "message": "正在翻譯…"
+  },
+  "toastTranslated": {
+    "message": "頁面已翻譯。"
+  },
+  "toastReverted": {
+    "message": "已還原原始頁面。"
+  },
+  "toastSelectionTranslated": {
+    "message": "選取內容已翻譯。"
+  },
+  "toastNoSelection": {
+    "message": "請先選取文字。"
+  },
+  "toastFailed": {
+    "message": "翻譯失敗，請重試。"
+  },
+  "toastNothing": {
+    "message": "找不到可翻譯的文字。"
+  },
+  "toastAlready": {
+    "message": "此頁面已翻譯。"
+  },
+  "toastCancelled": {
+    "message": "翻譯已取消。"
+  },
+  "toastCancel": {
+    "message": "取消"
+  },
+  "toastNothingToRevert": {
+    "message": "沒有可還原的內容。"
+  },
+  "toastPartial": {
+    "message": "部分文字無法翻譯。再次按下快速鍵即可還原。"
+  },
+  "toastRevert": {
+    "message": "還原"
   }
 }

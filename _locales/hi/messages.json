@@ -1,5 +1,59 @@
 {
   "appDesc": {
     "message": "पृष्ठों या चयनित पाठ को बिना पॉपअप, साफ-सुथरे तरीके से तेज शॉर्टकट की मदद से अनुवाद करें।"
+  },
+  "actionTitle": {
+    "message": "Helium Inline Translator"
+  },
+  "menuTranslatePage": {
+    "message": "पूरा पृष्ठ अनुवाद करें"
+  },
+  "menuTranslateSelection": {
+    "message": "चयनित टेक्स्ट अनुवाद करें"
+  },
+  "commandTranslatePage": {
+    "message": "वर्तमान पृष्ठ अनुवाद करें"
+  },
+  "commandTranslateSelection": {
+    "message": "चयनित टेक्स्ट अनुवाद करें"
+  },
+  "toastTranslating": {
+    "message": "अनुवाद हो रहा है…"
+  },
+  "toastTranslated": {
+    "message": "पृष्ठ अनुवादित।"
+  },
+  "toastReverted": {
+    "message": "मूल पृष्ठ बहाल किया गया।"
+  },
+  "toastSelectionTranslated": {
+    "message": "चयन अनुवादित।"
+  },
+  "toastNoSelection": {
+    "message": "पहले टेक्स्ट चुनें।"
+  },
+  "toastFailed": {
+    "message": "अनुवाद विफल। फिर से प्रयास करें।"
+  },
+  "toastNothing": {
+    "message": "कोई अनुवाद योग्य टेक्स्ट नहीं मिला।"
+  },
+  "toastAlready": {
+    "message": "यह पृष्ठ पहले से अनुवादित है।"
+  },
+  "toastCancelled": {
+    "message": "अनुवाद रद्द किया गया।"
+  },
+  "toastCancel": {
+    "message": "रद्द करें"
+  },
+  "toastNothingToRevert": {
+    "message": "वापस लाने के लिए कुछ नहीं है।"
+  },
+  "toastPartial": {
+    "message": "कुछ टेक्स्ट का अनुवाद नहीं हो सका। वापस लाने के लिए फिर से शॉर्टकट दबाएँ।"
+  },
+  "toastRevert": {
+    "message": "वापस लाएँ"
   }
 }

@@ -1,5 +1,59 @@
 {
   "appDesc": {
     "message": "팝업 없이 깔끔하게 페이지나 선택한 텍스트를 빠른 단축키로 번역합니다."
+  },
+  "actionTitle": {
+    "message": "Helium Inline Translator"
+  },
+  "menuTranslatePage": {
+    "message": "전체 페이지 번역"
+  },
+  "menuTranslateSelection": {
+    "message": "선택한 텍스트 번역"
+  },
+  "commandTranslatePage": {
+    "message": "현재 페이지 번역"
+  },
+  "commandTranslateSelection": {
+    "message": "선택한 텍스트 번역"
+  },
+  "toastTranslating": {
+    "message": "번역 중…"
+  },
+  "toastTranslated": {
+    "message": "페이지를 번역했습니다."
+  },
+  "toastReverted": {
+    "message": "원래 페이지로 복원했습니다."
+  },
+  "toastSelectionTranslated": {
+    "message": "선택 영역을 번역했습니다."
+  },
+  "toastNoSelection": {
+    "message": "먼저 텍스트를 선택하세요."
+  },
+  "toastFailed": {
+    "message": "번역에 실패했습니다. 다시 시도하세요."
+  },
+  "toastNothing": {
+    "message": "번역할 텍스트를 찾지 못했습니다."
+  },
+  "toastAlready": {
+    "message": "이 페이지는 이미 번역되었습니다."
+  },
+  "toastCancelled": {
+    "message": "번역이 취소되었습니다."
+  },
+  "toastCancel": {
+    "message": "취소"
+  },
+  "toastNothingToRevert": {
+    "message": "되돌릴 내용이 없습니다."
+  },
+  "toastPartial": {
+    "message": "일부 텍스트를 번역하지 못했습니다. 단축키를 다시 누르면 원래대로 돌아갑니다."
+  },
+  "toastRevert": {
+    "message": "되돌리기"
   }
 }
